@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
+    <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='menu'>
+        <div class='ribbon'>
+            <a href='#'><div>HOME</div></a>
+            <a href='#'><div>RECIPES</div></a>
+            <a href='#'><img src="logos/logo.png" width="200em"></a>
+            <a href='#'><div>ABOUT</div></a>
+            <a href='#'><div>CONTACT</div></a>
+        </div>
+    </div>
+    <div id="middleSection">
+        <h1>RECIPEDIA</h1>
+        <h3>- COOK WITH US -</h3>
+    </div>
+    <div id="bottomSection">
+        <div id="iconSection">
+            <a href="#" id="facebookIcon" class="icons"><img src="logos/facebook.png">
+            <a href="#" id="instagramIcon" class="icons"><img src="logos/instagram.png"></a>
+            <a href="#" id="youtubeIcon" class="icons"><img src="logos/youtube.png"></a>
+            <a href="#" id="tiktokIcon" class="icons"><img src="logos/tiktok.png"></a>
+            </a>
+        </div>
+        <div class="reviewSection">
+            <div class="carousel">
+                <div class="carouselItem visible">
+                    <div class="review">
+                        <h3>Theodore Derryl:</h3>
+                        <p>"<i>Good recipes and very simple dishes.</i>"</p>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="review">
+                        <h3>Natalee Alvin:</h3>
+                        <p>"<i>Affordable dishes. Great!</i>"</p>
+                    </div>
+                </div>
+                <div class="carouselItem">
+                    <div class="review">
+                        <h3>Susan Everitt:</h3>
+                        <p>"<i>Minimalistic plates. What a great place!</i>"</p>
+                    </div>
+                </div>
+                <div class="carouselButtons">
+                    <button class="btn" id="prev" aria-level="Previous slide"><i class="gg-arrow-left"></i></button>
+                    <button class="btn" id="next" aria-level="Next slide"><i class="gg-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="bubble"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

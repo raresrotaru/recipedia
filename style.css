@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.5)  url("images/bg.jpeg") no-repeat center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#menu {
+    display: flex;
+    height: 17em;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ribbon {
+    display: flex;
+    align-items: center;
+}
+
+.ribbon:after, .ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    float: left;
+    border: 1.5em solid #eeeeee;
+    z-index: 1;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link, .ribbon a:visited { 
+    color:#333333;
+    text-decoration: none;
+    float: left;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon div {
+    width: 14em;
+    background:#eeeeee;
+    display: flex;
+    justify-content: center;
+    line-height: 3em;
+    padding: 0 4em;
+    margin-top: 0.5em;
+    position: relative;
+    transition: background-color 0.3s, margin-top 0.3s;
+}
+
+.ribbon a:hover div {
+    background:#FF7F50;
+    margin-top: 0;
+}
+
+.ribbon div:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #51909B;
+    border-bottom: 0.5em solid #eeeeee;
+}
+
+.ribbon div:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #51909B;
+    border-bottom: 0.5em solid #eeeeee;
+}
+
+.ribbon a:nth-child(3) {
+   height: 100%;
+}
+
+#middleSection {
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#middleSection h1 {
+    font-weight: 900;
+    font-size: 6em;
+}
+
+#middleSection h3 {
+    font-weight: 400;
+}
+
+#bottomSection {
+    display: inline-block;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#iconSection {
+    height: 15em;
+    width: 6em;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    padding-bottom: 3em;
+}
+
+#iconSection a {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.15s ease;
+}
+
+#iconSection #facebookIcon:hover {
+    background-color: #3b5998;
+}
+
+#iconSection #instagramIcon:hover {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+#iconSection #youtubeIcon:hover {
+    background-color: #ff0000;
+}
+
+#iconSection #tiktokIcon:hover {
+    background-color: #000;
+}
+
+.icons img {
+    width: 2em;
+    text-decoration: none;
+}
+
+.reviewSection {
+    height: 100%;
+    width: 28em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    width: 24em;
+    background: rgba(247, 243, 243, 0.4);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    border-radius: 50%;
+}
+
+.carousel h3 {
+    font-size: 20px;
+}
+
+.carousel p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.carouselButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.carouselButtons button {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 1em;
+}
+
+.carouselButtons button i {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .carouselItem, .carousel .carouselItem .hidden {
+    display: none;
+}
+
+.carousel .carouselItem .review {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel .carouselItem.visible {
+    display: block;
+    animation: fadeVisibility 0.5s
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+
+.bubble {
+    width: 4em;
+    height: 3em;
+    border-radius: 50%;
+    background: rgba(247, 243, 243, 0.4);
+    align-self: flex-end;
+    margin-right: 6em;
+    margin-top: -0.2em;
+    position: relative;
+}
+
+div.bubble::after, div.bubble::before {
+    content: "";
+    position: absolute;
+    width: 2.5em;
+    height: 1.7em;
+    background: rgba(247, 243, 243, 0.4);
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -1.6em;
+    margin-right: -1.5em;
+}
+
+div.bubble::before {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 1em;
+    background: rgba(247, 243, 243, 0.5);
+    border-radius: 50%;
+    margin-bottom: -2.5em;
+    margin-right: -2.8em;
+}
+
